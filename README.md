@@ -49,4 +49,12 @@ Feels cognizant about the unsatisfying model performance, I intend to use anothe
   <img src="https://github.com/dmsardhty/People-Analytic/blob/master/2.png" />
 </p>
 
-Furthermore, I add the Random Forest model with RandomizedSearchCV tuning and obtained a quite good score on validation which is **0.96 AUC score**
+Furthermore, I add the Random Forest model with RandomizedSearchCV tuning and obtained a quite good score on validation which is **0.96 AUC score**.
+
+# Feature Importance 
+
+<p align="center">
+  <img src="https://github.com/dmsardhty/People-Analytic/blob/master/4.png" />
+</p>
+
+
