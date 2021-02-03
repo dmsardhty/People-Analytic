@@ -27,3 +27,26 @@ I am using the BRI Hackathon 2021 : People Analytic data found in Kaggle. The da
 * Last_achievement_% : presentase pencapaian triwulan terakhir terhadap target
 * Achievement_above_100%_during3quartal : Jumlah pencapaian diatas 100% dalam 3 tahun terkahir
 * Best Performance : Termasuk dalam best performance (1/0)
+
+
+# Model 
+
+Due to imbalanced data, I'm building two models, one using StratifiedKFold sampling with LGBM model and the other one using SMOTEENN resampling with Random Forest Classifier model. Figure below shows the data imbalance before performing data balancing technique. 
+
+<p align="center">
+  <img src="https://github.com/dmsardhty/People-Analytic/blob/master/1.png" />
+</p>
+
+For the first model, I try to use StratifiedKFold splitting to handle the data imbalance according to the literature and some blog contents that i read. After that i perform an LGBM Classifier model with 3 data split consists of train, validation, and test. The results show that after 5 folding, a 0.7 AUC scores is generated in training set and turns to 0.6 AUC scores on validation set. The following AUC curve for this model are as shown below:
+
+<p align="center">
+  <img src="https://github.com/dmsardhty/People-Analytic/blob/master/3.png" />
+</p>
+
+Feels cognizant about the unsatisfying model performance, I intend to use another resampling method using SMOTEENN and turns out like this:
+
+<p align="center">
+  <img src="https://github.com/dmsardhty/People-Analytic/blob/master/2.png" />
+</p>
+
+Furthermore, I add the Random Forest model with RandomizedSearchCV tuning and obtained a quite good score on validation which is **0.96 AUC score**
